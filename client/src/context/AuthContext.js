@@ -31,11 +31,11 @@ export const AuthContextProvider = ({ children }) => {
   const errorMessage = (message) => toast.error(message, options);
 
   // SOCKET CONNECT
-  const socket = useRef();
+  const socket = useRef(null);
 
   useEffect(() => {
     if (!socket.current) {
-      socket.current = io("http://103.75.186.247");
+      socket.current = io("http://103.75.186.247:9500");
     }
 
     if (socket.current && currentUser.id) {
