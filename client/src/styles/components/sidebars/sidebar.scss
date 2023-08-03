@@ -1,0 +1,122 @@
+.sidebar {
+  flex: 1;
+  display: flex;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  .sidebar-sub {
+    position: fixed;
+    width: 400px;
+    height: 100%;
+    left: 76.8px;
+    background-color: $white-color;
+    transition: all 0.3s ease;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  .sidebar-container {
+    padding: 12px;
+    border-right: 1px solid $border-color;
+
+    .sidebar-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 30px 0;
+
+      .sidebar-logo-img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+      }
+
+      h2 {
+        text-shadow: 1px 1.5px black;
+        font-size: 22px;
+      }
+    }
+
+    .sidebar-list {
+      width: 100%;
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      transition: all 0.3s ease;
+
+      .sidebar-item {
+        width: 100%;
+        padding: 13px;
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
+
+        &:hover {
+          background-color: #f2f2f2;
+          cursor: pointer;
+          transition: all 0.2s linear;
+        }
+
+        .sidebar-item-icon {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .sidebar-icon {
+            font-size: 26px;
+          }
+        }
+
+        .sidebar-item-icon.notification {
+          position: relative;
+          &::after {
+            position: absolute;
+            content: "";
+            top: 0;
+            right: -2px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            object-fit: cover;
+            background-color: $red-color;
+          }
+        }
+
+        // .count-notification {
+        //   position: absolute;
+        //   top: 0;
+        //   left: 20px;
+        //   width: 20px;
+        //   height: 20px;
+        //   border-radius: 50%;
+        //   object-fit: cover;
+        //   background-color: $red-color;
+        //   color: $white-color;
+        //   display: flex;
+        //   justify-content: center;
+        //   align-items: center;
+        // }
+
+        span {
+          padding-left: 16px;
+        }
+      }
+
+      .sidebar-item.active {
+        background-color: #f2f2f2;
+
+        .sidebar-icon {
+          // background-color: #f2f2f2;
+        }
+
+        span {
+          font-weight: 700;
+          // background-color: #f2f2f2;
+        }
+      }
+    }
+  }
+}

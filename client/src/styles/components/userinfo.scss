@@ -1,0 +1,42 @@
+.userinfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+
+  .userinfo-details {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    .userinfo-img {
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      object-fit: cover;
+      cursor: pointer;
+    }
+
+    .userinfo-username {
+      font-weight: 600;
+      cursor: pointer;
+    }
+  }
+
+  .userinfo-btn {
+    color: $blue-color;
+    cursor: pointer;
+    font-size: 14px;
+
+    .loading {
+      position: relative;
+      top: 50%;
+      left: 50%;
+
+      .spinner {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}

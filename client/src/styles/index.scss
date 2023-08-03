@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+
+* {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  box-sizing: border-box;
+  font-family: "Space Grotesk", sans-serif;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: unset;
+  height: fit-content;
+  // display: block;
+}
+
+// VARIABLES COLORS
+$blue-color: #0095f6;
+$gray-color: #737373;
+$border-color: #dbdbdb;
+$background-btn: #efefef;
+$black-color: #000000;
+$white-color: #ffffff;
+$red-color: #ed4956;
+
+@import "./pages/home.scss";
+@import "./pages/profile.scss";
+@import "./pages/postDetails.scss";
+@import "./pages/create.scss";
+@import "./pages/login.scss";
+@import "./pages/register.scss";
+@import "./pages/editProfile.scss";
+@import "./pages/chat.scss";
+@import "./pages/notFound.scss";
+@import "./components/sidebars/sidebar.scss";
+@import "./components/sidebars/notification.scss";
+@import "./components/sidebars/search.scss";
+@import "./components/main.scss";
+@import "./components/section.scss";
+@import "./components/rightbar.scss";
+@import "./components/userinfo.scss";
+@import "./components/stories.scss";
+@import "./components/posts.scss";
+@import "./components/footer.scss";
+@import "./components/postOptions.scss";
+@import "./components/popupOptions.scss";
+@import "./components/listFollow.scss";
+@import "./components/switchAccount.scss";
+@import "./components/loading.scss";
+@import "./components/newChat.scss";
+@import "./components/chatDetails.scss";
+@import "./components/typing.scss";
+@import "./components/changeName.scss";
+@import "./components/discardOptions.scss";
+@import "./components/filter.scss";
+@import "./components/skeleton.scss";
+@import "./components/userCard.scss";
+@import "./components/unAuthorized.scss";

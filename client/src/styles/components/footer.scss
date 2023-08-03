@@ -1,0 +1,38 @@
+.footer {
+  .footer-container {
+    max-width: 935px;
+    margin: 0 auto;
+    padding: 30px 20px;
+
+    .footer-list {
+      list-style-type: none;
+      display: flex;
+      gap: 14px;
+
+      .footer-item {
+        font-size: 12px;
+        color: $gray-color;
+
+        &:hover {
+          cursor: pointer;
+          text-decoration: underline;
+          transition: all 0.2s linear;
+        }
+      }
+    }
+
+    .footer-bottom {
+      margin-top: 15px;
+      text-align: center;
+      p {
+        font-size: 12px;
+        color: $gray-color;
+        &:hover {
+          cursor: pointer;
+          text-decoration: underline;
+          transition: all 0.2s linear;
+        }
+      }
+    }
+  }
+}

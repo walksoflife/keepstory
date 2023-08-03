@@ -1,0 +1,182 @@
+.posts {
+  margin-top: 24px;
+  .posts-container {
+    max-width: 470px;
+    .post {
+      padding: 30px 0;
+      border-bottom: 1px solid $border-color;
+      width: 470px;
+      .post-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .post-info-details {
+          position: relative;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          .post-info-avatar {
+            width: 32px;
+            height: 32px;
+            object-fit: cover;
+            border-radius: 50%;
+            cursor: pointer;
+          }
+          .post-info-username {
+            font-weight: 600;
+            cursor: pointer;
+          }
+          .post-info-created {
+            font-size: 14px;
+            color: $gray-color;
+          }
+
+          .post-info-btn-fl {
+            font-size: 14px;
+            color: $blue-color;
+            cursor: pointer;
+            font-weight: 500;
+
+            .loading {
+              position: relative;
+              left: 50%;
+              top: 50%;
+              .spinner {
+                width: 18px;
+                height: 18px;
+              }
+            }
+          }
+        }
+        .post-info-options {
+          cursor: pointer;
+          font-size: 24px;
+          &:hover {
+            transition: all ease 0.2s;
+            transform: scale(1.2);
+          }
+        }
+      }
+      .post-img {
+        margin: 12px 0;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+
+        .post-img-btn {
+          background-color: rgba(0, 0, 0, 0.6);
+          cursor: pointer;
+          font-size: 24px;
+          position: absolute;
+          top: 50%;
+          border-radius: 50%;
+          color: $white-color;
+          z-index: 1;
+          transform: translateY(-50%);
+        }
+
+        .post-img-btn.hidden {
+          display: none;
+        }
+
+        .post-img-btn.prev {
+          left: 10px;
+        }
+
+        .post-img-btn.next {
+          right: 10px;
+        }
+        .post-img-container {
+          width: fit-content;
+          max-height: 580px;
+          display: flex;
+          transition: all 0.7s ease;
+
+          .lazy-img {
+            width: 470px;
+            height: 580px;
+            background-color: $border-color;
+          }
+
+          img {
+            width: 470px;
+            object-fit: cover;
+            border-radius: 4px;
+          }
+          .post-img-count {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            color: gray;
+            font-size: 14px;
+          }
+        }
+      }
+
+      .post-actions {
+        display: flex;
+        justify-content: space-between;
+        // height: 30px;
+        .post-actions-left {
+          .post-icon {
+            cursor: pointer;
+            font-size: 26px;
+            margin-right: 14px;
+            &:hover {
+              transition: all ease 0.2s;
+              transform: scale(1.1);
+            }
+          }
+        }
+        .post-actions-right {
+          .post-icon {
+            cursor: pointer;
+            font-size: 26px;
+            &:hover {
+              transition: all ease 0.2s;
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+
+      .post-text {
+        font-size: 14px;
+        margin-top: 6px;
+      }
+
+      .post-title {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: 10px;
+        .post-title-username {
+          font-size: 15.5px;
+          font-weight: 600;
+          cursor: pointer;
+        }
+        .post-title-caption {
+          font-size: 15.5px;
+          // text-overflow: ellipsis;
+          // overflow: hidden;
+          // display: -webkit-box;
+          // -webkit-line-clamp: 1;
+          // -webkit-box-orient: vertical;
+          // vertical-align: baseline;
+          // word-wrap: break-word;
+
+          .post-viewmore {
+            font-size: 12px;
+            color: $blue-color;
+            cursor: pointer;
+            margin-left: 6px;
+            &:hover {
+              transition: all 0.2s ease;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}

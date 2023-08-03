@@ -1,0 +1,49 @@
+.sa {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  .sa-container {
+    width: 400px;
+    margin: 0px auto;
+    background-color: $white-color;
+    border-radius: 4px;
+    .sa-list {
+      width: 100%;
+      list-style-type: none;
+
+      .sa-item {
+        padding: 15px 0;
+        text-align: center;
+        border-bottom: 1px solid $border-color;
+        cursor: pointer;
+
+        &:last-child {
+          border-bottom: unset;
+        }
+
+        &:hover {
+          background-color: $background-btn;
+          transition: all 0.2s linear;
+        }
+      }
+    }
+  }
+
+  .sa-close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 30px;
+    cursor: pointer;
+    color: $white-color;
+  }
+}

@@ -1,0 +1,12 @@
+.section {
+  // flex: 2;
+
+  .section-container {
+    // max-width: 640px;
+    margin-right: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

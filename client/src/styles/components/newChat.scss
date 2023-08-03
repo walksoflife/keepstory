@@ -1,0 +1,173 @@
+.newchat {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  transition: all 0.3s ease-in-out;
+
+  .newchat-container {
+    width: 550px;
+    min-height: 500px;
+    margin: 0px auto;
+    background-color: $white-color;
+    border-radius: 15px;
+    position: relative;
+    padding-bottom: 12px;
+
+    .loading {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      .spinner {
+        width: 35px;
+        height: 35px;
+      }
+    }
+
+    .newchat-title {
+      text-align: center;
+      height: 55px;
+      line-height: 55px;
+      font-weight: 600;
+      font-size: 18px;
+      border-bottom: 1px solid $border-color;
+    }
+
+    .newchat-search {
+      padding: 15px 20px;
+      border-bottom: 1px solid $border-color;
+
+      .newchat-friend-choose {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+        overflow-y: scroll;
+        height: auto;
+
+        .newchat-friend-item {
+          padding: 2px 8px;
+          background-color: #e0f1ff;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          color: $blue-color;
+          border-radius: 4px;
+
+          .newchat-friend-name {
+          }
+        }
+      }
+
+      span {
+        font-weight: 600;
+        margin-right: 10px;
+        font-size: 17px;
+      }
+
+      .newchat-input {
+        width: calc(100% - 34px);
+        border: none;
+        outline: none;
+      }
+    }
+
+    .newchat-search-results {
+      padding: 20px 0;
+      overflow-y: scroll;
+      height: calc(500px - 170px);
+
+      .loading {
+        position: relative;
+        top: 8px;
+        left: 50%;
+        .spinner {
+          width: 30px;
+          height: 30px;
+        }
+      }
+
+      .newchat-user {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 16px;
+
+        &:hover {
+          background-color: #f2f2f2;
+          cursor: pointer;
+          transition: all 0.2s linear;
+        }
+
+        .newchat-user-info {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          .newchat-img {
+            width: 44px;
+            height: 44px;
+            object-fit: cover;
+            border-radius: 50%;
+          }
+
+          .newchat-user-name {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+
+            .newchat-name {
+              font-weight: 500;
+            }
+
+            .newchat-username {
+              font-size: 14px;
+              color: $gray-color;
+            }
+          }
+        }
+
+        .newchat-choose-user {
+          width: 22px;
+          height: 22px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .newchat-btn {
+      padding: 0 20px;
+      .newchat-btn-chat {
+        background-color: $blue-color;
+        color: $white-color;
+        font-weight: 600;
+        padding: 10px 0;
+        width: 100%;
+        border: none;
+        cursor: pointer;
+        border-radius: 8px;
+
+        &:hover {
+          opacity: 0.7;
+          transition: all 0.2s linear;
+        }
+      }
+    }
+
+    .newchat-close {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 28px;
+      cursor: pointer;
+    }
+  }
+}

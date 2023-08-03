@@ -1,0 +1,283 @@
+.profile {
+  display: flex;
+  .profile-container {
+    flex: 5;
+
+    .loading {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 50%;
+
+      .spinner {
+      }
+    }
+
+    .profile-main {
+      max-width: 975px;
+      margin: 0 auto;
+      padding: 30px 20px;
+
+      .profile-info {
+        display: flex;
+        gap: 100px;
+        align-items: center;
+        padding-left: 50px;
+
+        .profile-avatar {
+          width: 150px;
+          height: 150px;
+          object-fit: cover;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+
+        .profile-details {
+          .profile-details-top {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            .profile-username {
+              font-weight: 600;
+              cursor: pointer;
+              font-size: 20px;
+              margin-right: 20px;
+            }
+            .profile-edit-btn {
+              border: none;
+              padding: 5px 20px;
+              cursor: pointer;
+              border-radius: 5px;
+              &:hover {
+                transition: all 0.2s linear;
+                opacity: 0.7;
+              }
+            }
+
+            .profile-edit-btn.follow {
+              background-color: $blue-color;
+              color: $white-color;
+              font-weight: 500;
+              min-width: 110px;
+
+              .loading {
+                position: relative;
+                margin-left: -10px;
+                transform: translateY(0%);
+                .spinner {
+                  width: 20px;
+                  height: 20px;
+                }
+              }
+            }
+          }
+
+          .profile-details-follow {
+            display: flex;
+            gap: 40px;
+            margin: 20px 0;
+
+            .profile-count {
+            }
+          }
+
+          .profile-info-more {
+            p {
+              font-size: 18px;
+
+              &:first-child {
+                font-weight: 600;
+                margin-bottom: 10px;
+              }
+            }
+          }
+        }
+      }
+
+      .profile-highlight-stories {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        padding: 50px 0;
+        border-bottom: 1px solid $border-color;
+        padding-left: 30px;
+
+        .profile-story {
+          cursor: pointer;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+          .profile-story-img {
+            width: 87px;
+            height: 87px;
+            object-fit: cover;
+            border-radius: 50%;
+          }
+          .profile-story-name {
+            font-size: 14px;
+          }
+        }
+
+        .profile-story-create {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+          .profile-story-create-icon {
+            width: 87px;
+            height: 87px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $background-btn;
+            border: 1px solid $border-color;
+            cursor: pointer;
+          }
+          .profile-story-create-text {
+            font-weight: 500;
+            font-size: 14px;
+          }
+        }
+      }
+
+      .profile-posts {
+        .profile-posts-header {
+          display: flex;
+          justify-content: center;
+          gap: 40px;
+
+          .profile-posts-header-item {
+            padding: 15px 0;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+
+            .profile-posts-header-text {
+              font-size: 14px;
+              font-weight: 500;
+            }
+          }
+
+          .profile-posts-header-item.active {
+            border-top: 2px solid $black-color;
+          }
+        }
+      }
+
+      .profile-view-posts {
+        .profile-posts-myself {
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 4px;
+
+          .profile-posts-myself-item {
+            height: 309px;
+            width: 309px;
+            cursor: pointer;
+            position: relative;
+
+            &:hover {
+              .profile-posts-myself-info {
+                transition: all 0.3s ease;
+                display: flex;
+              }
+
+              .profile-posts-myself-img {
+                transition: all 0.3s ease;
+                opacity: 0.8;
+              }
+
+              .profile-posts-myself-info {
+                transition: all 0.3s ease;
+                display: flex;
+              }
+            }
+
+            .profile-posts-myself-files {
+              font-size: 20px;
+              position: absolute;
+              top: 10px;
+              right: 10px;
+              color: $white-color;
+              z-index: 10;
+            }
+
+            .lazy-img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+
+            .profile-posts-myself-img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+
+            .profile-posts-myself-info {
+              transition: all 0.3s ease;
+              background-color: rgba(0, 55, 107, 0.3);
+              width: 100%;
+              height: 100%;
+              list-style-type: none;
+              position: absolute;
+              top: 0;
+              left: 0;
+              display: none;
+              justify-content: center;
+              align-items: center;
+              gap: 20px;
+              .profile-posts-myself-info-item {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+
+                .profile-posts-myself-icon {
+                  font-size: 24px;
+                  color: $white-color;
+
+                  &:last-child {
+                    font-size: 20px;
+                  }
+                }
+
+                span {
+                  font-weight: 600;
+                  color: $white-color;
+                  font-size: 18px;
+                }
+              }
+            }
+          }
+        }
+
+        .profile-text {
+          margin: 60px 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 20px;
+          .profile-text-icon {
+            width: 62px;
+            height: 62px;
+            border: 1px solid $black-color;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+          }
+          h1 {
+            font-size: 26px;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}

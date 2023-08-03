@@ -1,0 +1,178 @@
+.user-card {
+  position: absolute;
+  left: 40px;
+  top: 30px;
+  background-color: $white-color;
+  width: 399px;
+  height: fit-content;
+  border-radius: 12px;
+  transition: all 0.5s ease;
+  border: 1px solid $border-color;
+  z-index: 11;
+
+  .user-card-top {
+    .user-card-info {
+      margin: 16px 0 0 16px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      .user-card-avatar {
+        cursor: pointer;
+        width: 56px;
+        height: 56px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+      .user-card-details {
+        .user-card-username {
+          font-size: 15px;
+          font-weight: 700;
+          cursor: pointer;
+          margin-bottom: 2px;
+        }
+        .user-card-name {
+          font-weight: 400;
+          color: $gray-color;
+        }
+      }
+    }
+  }
+  .user-card-title {
+    margin-top: 24px;
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .user-card-item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+
+      b {
+        font-size: 17px;
+        font-weight: 900;
+      }
+      .user-card-desc {
+        font-size: 15px;
+      }
+    }
+  }
+
+  .user-card-posts {
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+
+    .user-card-posts-img {
+      width: 130px;
+      height: 130px;
+    }
+  }
+
+  .user-card-notice {
+    padding: 18px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    .user-card-icon {
+      width: 40px;
+      height: 40px;
+      border: 1px solid $black-color;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    h2 {
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .user-card-text {
+      font-size: 14px;
+      color: $gray-color;
+      text-align: center;
+      padding: 0 16px;
+    }
+  }
+
+  .user-card-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 18px 18px 18px;
+
+    .user-card-btn-msg {
+      flex: 1;
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      background-color: $blue-color;
+      color: $white-color;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .user-card-btn-unfollow {
+      flex: 1;
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      //   background-color: $blue-color;
+      //   color: $white;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .user-card-btn-follow {
+      width: 100%;
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      background-color: $blue-color;
+      color: $white-color;
+      font-weight: 500;
+      cursor: pointer;
+
+      .loading {
+        position: relative;
+        left: 50%;
+        top: 50%;
+        .spinner {
+          width: 25px;
+          height: 25px;
+        }
+      }
+    }
+
+    .user-card-btn-edit {
+      width: 100%;
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      //   background-color: $blue-color;
+      //   color: $white;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.7;
+      transition: all 0.3s ease;
+    }
+  }
+}
+
+.user-card.no-posts {
+  width: 360px;
+}

@@ -1,0 +1,81 @@
+.search-container {
+  .search-top {
+    padding: 0 20px 30px 20px;
+    border-bottom: 1px solid $border-color;
+    h2 {
+      margin: 20px 0 40px 0;
+      font-size: 28px;
+      text-shadow: 1px 1px $black-color;
+    }
+
+    .search-form {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      height: 40px;
+      padding: 0 15px;
+      background-color: $background-btn;
+      border-radius: 10px;
+
+      .search-input {
+        border: none;
+        outline: none;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+      }
+    }
+  }
+
+  .search-result {
+    list-style-type: none;
+    overflow-y: scroll;
+    padding: 30px 0;
+    min-height: calc(100vh - 178px);
+
+    .loading {
+      position: relative;
+      left: 50%;
+      top: 20%;
+
+      .spinner {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    .search-result-item {
+      padding: 10px 24px;
+      cursor: pointer;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+
+      &:hover {
+        background-color: #f2f2f2;
+        transition: all 0.2s linear;
+      }
+
+      .search-result-img {
+        width: 44px;
+        height: 44px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+
+      .search-result-info {
+        .search-result-username {
+          font-weight: 600;
+          font-size: 15px;
+          margin-bottom: 3px;
+        }
+
+        .search-result-name {
+          color: $gray-color;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}

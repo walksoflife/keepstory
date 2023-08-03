@@ -1,0 +1,64 @@
+.rightbar {
+  // width: 100%;
+  flex: 1;
+
+  .loading {
+    position: relative;
+    top: 50%;
+    height: 50%;
+  }
+
+  .rightbar-container {
+    // max-width: 320px;
+    .rightbar-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .rightbar-info-details {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        .rightbar-info-img {
+          width: 56px;
+          height: 56px;
+          object-fit: cover;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+
+        .rightbar-info-fullname {
+          cursor: pointer;
+          .rightbar-info-username {
+            font-weight: 600;
+          }
+          .rightbar-info-name {
+            color: $gray-color;
+          }
+        }
+      }
+
+      .rightbar-info-btn {
+        color: $blue-color;
+        cursor: pointer;
+        font-weight: 500;
+      }
+    }
+
+    .rightbar-suggests {
+      .rightbar-suggest-text {
+        margin: 20px 0 10px 0;
+        font-weight: 600;
+        font-size: 15px;
+        color: $gray-color;
+      }
+    }
+
+    .rightbar-foot {
+      margin-top: 50px;
+      .rightbar-copyright {
+        color: $border-color;
+        font-size: 12px;
+      }
+    }
+  }
+}

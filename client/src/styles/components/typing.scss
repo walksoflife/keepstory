@@ -1,0 +1,42 @@
+.typing-message {
+  margin-left: 36px;
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  padding: 10px;
+
+  .typing-dots {
+    width: 10px;
+    height: 10px;
+    background-color: $blue-color;
+    border-radius: 50%;
+    display: flex;
+    margin: 0 2px;
+    animation: loadingFade 1s infinite;
+    animation-delay: 0;
+
+    &:nth-child(2) {
+      opacity: 0.8;
+      animation-delay: 0.2s;
+    }
+
+    &:nth-child(3) {
+      opacity: 0.4;
+      animation-delay: 0.4s;
+    }
+  }
+}
+
+@keyframes loadingFade {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

@@ -1,0 +1,33 @@
+.home {
+  display: flex;
+
+  /* Áp dụng keyframes cho phần tử */
+  .top-sub {
+    animation-name: slide-in-out;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+}
+
+.home.unauthorized {
+  .sidebar {
+    display: none;
+  }
+  .main {
+    display: none;
+  }
+}
+
+/* Định nghĩa keyframes */
+@keyframes slide-in-out {
+  0% {
+    transform: translateY(-32px);
+  }
+  50% {
+    transform: translateY(32px);
+  }
+  100% {
+    transform: translateY(-32px);
+  }
+}

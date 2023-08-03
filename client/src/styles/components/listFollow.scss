@@ -1,0 +1,80 @@
+.list-fl {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  .list-fl-container {
+    width: 400px;
+    margin: 0px auto;
+    background-color: $white-color;
+    border-radius: 4px;
+
+    .list-fl-title {
+      text-align: center;
+      font-weight: 500;
+      font-size: 18px;
+      padding: 15px 0;
+      border-bottom: 1px solid $border-color;
+    }
+
+    .list-fl-list {
+      width: 100%;
+      max-height: 360px;
+      overflow-y: scroll;
+      list-style-type: none;
+
+      .list-fl-item {
+        padding: 10px 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .list-fl-info {
+          display: flex;
+          gap: 20px;
+          align-items: center;
+          .list-fl-img {
+            cursor: pointer;
+            width: 44px;
+            height: 44px;
+            object-fit: cover;
+            border-radius: 50%;
+          }
+
+          .list-fl-info-name {
+            .list-fl-username {
+              font-weight: 600;
+            }
+
+            .list-fl-name {
+            }
+          }
+        }
+
+        .list-fl-btn {
+          border: none;
+          padding: 5px 20px;
+          cursor: pointer;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+
+  .list-fl-close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 30px;
+    cursor: pointer;
+    color: $white-color;
+  }
+}

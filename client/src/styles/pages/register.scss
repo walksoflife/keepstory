@@ -1,0 +1,162 @@
+.register {
+  .register-container {
+    max-width: 480px;
+    margin: 0 auto;
+    margin-top: 32px;
+    margin-bottom: 20px;
+    height: 100%;
+
+    .loading {
+      position: relative;
+      top: 50%;
+      left: 50%;
+    }
+
+    .register-right-top {
+      border: 1px solid $border-color;
+      padding: 0 40px;
+      border-radius: 4px;
+
+      h2 {
+        padding: 45px 0 20px 0;
+        text-align: center;
+        font-size: 40px;
+        text-shadow: 2px 1px $black-color;
+      }
+
+      .form-register {
+        .form-register-group {
+          margin-bottom: 10px;
+          &:last-child {
+            margin-bottom: unset;
+          }
+          input {
+            width: 100%;
+            padding: 9px 0 7px 8px;
+            border: none;
+            outline: none;
+            border: 1px solid $border-color;
+            border-radius: 4px;
+            outline: 1px transparent;
+            margin-bottom: 12px;
+            background-color: #fafafa;
+
+            &:focus {
+              outline: 1px solid $black-color;
+            }
+
+            &:invalid[focused="true"] {
+              outline-color: #ff3860;
+            }
+            &:invalid[focused="true"] ~ p {
+              display: block;
+            }
+          }
+
+          .form-err {
+            color: #ff3860;
+            font-size: 14px;
+            margin: -10px 0 5px 8px;
+            display: none;
+          }
+        }
+
+        .register-btn {
+          margin: 20px 0 40px 0;
+          width: 100%;
+          border: none;
+          background-color: $blue-color;
+          color: $white-color;
+          padding: 7px 0;
+          font-weight: 500;
+          cursor: pointer;
+          border-radius: 4px;
+
+          &:hover {
+            transition: all 0.2s linear;
+            opacity: 0.7;
+          }
+        }
+      }
+
+      .form-or {
+        font-size: 14px;
+        color: $gray-color;
+        font-weight: 500;
+        text-align: center;
+        margin: 15px 0 20px 0;
+        position: relative;
+
+        &::before {
+          position: absolute;
+          left: 0;
+          top: 50%;
+          content: "";
+          width: 40%;
+          height: 1px;
+          background-color: $border-color;
+        }
+
+        &::after {
+          position: absolute;
+          right: 0;
+          top: 50%;
+          content: "";
+          width: 40%;
+          height: 1px;
+          background-color: $border-color;
+        }
+      }
+
+      .register-with-fb {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        justify-content: center;
+        color: $white-color;
+        font-weight: 500;
+        cursor: pointer;
+        background-color: $blue-color;
+        padding: 7px 0;
+        border-radius: 4px;
+        margin-bottom: 20px;
+      }
+
+      .form-infor {
+        text-align: center;
+        color: $gray-color;
+        font-size: 13px;
+        padding: 20px 40px 0 40px;
+      }
+    }
+
+    .register-right-bottom {
+      margin-top: 10px;
+      border: 1px solid $border-color;
+      padding: 20px 0;
+      border-radius: 4px;
+      text-align: center;
+
+      span {
+        font-size: 14px;
+        &:last-child {
+          cursor: pointer;
+          color: $blue-color;
+          font-weight: 600;
+          margin-left: 5px;
+        }
+      }
+    }
+
+    .register-app {
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+
+      img {
+        cursor: pointer;
+        height: 40px;
+      }
+    }
+  }
+}

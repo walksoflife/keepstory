@@ -1,0 +1,107 @@
+.edit {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+
+  .loading{
+    position: relative;
+    left: 50%;
+  }
+
+  .edit-container {
+    max-width: 600px;
+    margin: 0px auto;
+    padding: 30px 20px;
+    background-color: $white-color;
+    border-radius: 4px;
+
+    h2 {
+      font-size: 26px;
+      text-shadow: 1px 1px $black-color;
+      margin-bottom: 30px;
+    }
+
+    .edit-profile {
+      padding: 0px 50px 30px 50px;
+      .edit-form-input {
+        width: 100%;
+        padding: 9px 0 7px 8px;
+        border: none;
+        outline: none;
+        border-radius: 4px;
+        outline: 1px transparent;
+        margin-bottom: 10px;
+        background-color: #fafafa;
+
+        &:focus {
+          outline: 1px solid $black-color;
+        }
+      }
+
+      .form-edit-group {
+        display: flex;
+        justify-content: space-between;
+        img {
+          width: 100px;
+          height: 100px;
+          object-fit: cover;
+          border-radius: 50%;
+          margin-bottom: 30px;
+        }
+
+        .edit-profile-img {
+        //   color: transparent;
+
+          &::-webkit-file-upload-button {
+            visibility: hidden;
+          }
+
+          &::before {
+            content: "Change avatar";
+            color: $white-color;
+            display: inline-block;
+            background: $blue-color;
+            border-radius: 4px;
+            padding: 6px 12px;
+            outline: none;
+            white-space: nowrap;
+            -webkit-user-select: none;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+          }
+        }
+      }
+
+      .edit-btn {
+        float: right;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 6px 12px;
+        color: $white-color;
+        background-color: $blue-color;
+        border-radius: 4px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .edit-close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 30px;
+    cursor: pointer;
+    color: $white-color;
+  }
+}
